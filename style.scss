@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@200;400&display=swap");
+
+* {box-sizing: border-box}
+
+body {
+ display: flex;
+ height: 100vh;
+ margin: 0;
+ background-color: #2A2A2A;
+ color: #FFF;
+ font-family: "Poppins", sans-serif;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+
+ .user-form {
+  max-width: 700px; @media (max-width: 500px) {max-width: 500}
+  width: 100%;
+
+  input {
+   display: block;
+   width: 100%;
+   margin-bottom: 2rem;
+   padding: 1rem;
+   background-color: #4C2885;
+   color: #FFF;
+   border: none;
+   border-radius: 10px;
+   font-family: inherit;
+   font-size: 1rem;
+   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(#000, 0.1);
+
+   &:focus {outline: none}
+
+   &::placeholder {color: #BBB}
+  }
+ }
+
+ .card {
+  display: flex;
+  max-width: 800px;
+  margin: 0 1.5rem;
+  padding: 3rem;
+  background-color: #FFF;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(#000, 0.1);
+
+  @media (max-width: 500px) {
+   flex-direction: column;
+   align-items: center;
+  }
+
+  .avatar {
+   width: 150px;
+   height: 150px;
+   border: 10px solid #555;
+   border-radius: 50%;
+  }
+
+  .user-info {
+   margin-left: 2rem;
+   color: #555;
+
+   h2 {margin-top: 0}
+
+   ul {
+    display: flex;
+    max-width: 400px;
+    padding: 0;
+    justify-content: space-between;
+    list-style: none;
+
+    li {
+     display: flex;
+     @media (max-width: 500px) {flex-direction: column}
+     align-items: center;
+     justify-content: center;
+
+     strong {
+      margin-left: 0.5rem;
+      font-size: 0.9rem;
+     }
+    }
+   }
+  }
+
+  .repo {
+   display: inline-block;
+   margin-bottom: 0.5rem;
+   margin-right: 0.5rem;
+   padding: 0.25rem 0.5rem;
+   background-color: #2A2A72;
+   color: #FFF;
+   font-size: 0.7rem;
+   text-decoration: none;
+  }
+ }
+}
